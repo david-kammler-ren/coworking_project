@@ -13,7 +13,8 @@ phases:
       - echo Starting build at `date`
       - echo Building the Docker image...
       - cd analytics
-      - docker build -t $IMAGE_REPO_NAME:$CODEBUILD_BUILD_NUMBER .
+      - pwd
+      - docker build -t $IMAGE_REPO_NAME:$CODEBUILD_BUILD_NUMBER analytics
       - docker tag $IMAGE_REPO_NAME:$CODEBUILD_BUILD_NUMBER $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$CODEBUILD_BUILD_NUMBER
   post_build:
     commands:
