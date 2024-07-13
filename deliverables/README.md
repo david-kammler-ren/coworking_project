@@ -59,6 +59,7 @@
   - db_cluster_creation/pvc.yaml
   - db_cluster_creation/pv.yaml
   - db_cluster_creation/postgresql-deployment.yaml
+  - db_cluster_creation/postgresql-service.yaml
 - Initial dataset can be reconstructed by
   - Setting a port-forward on the postgresql-service:
     kubectl port-forward service/postgresql-service 5433:5432
