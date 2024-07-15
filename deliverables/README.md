@@ -70,7 +70,7 @@
 - Runs a dockerized Python Flask service
   - Dockerfile: analytics/Dockerfile
   - AWS CodeBuild via analytics/buildspec.yml
-  - Docker images are automatically uploaded to AWS ECR and tagged with the build number
+  - Docker images are automatically uploaded to AWS ECR and tagged with the build number on push to the repository.
 - Deployment via
   - deployment/configmap.yaml (for config map and secret storing the DB password)
   - deployment/coworking.yaml (load balancer service and coworking app)
